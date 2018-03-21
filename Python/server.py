@@ -22,7 +22,7 @@ def response_200(message):
 
 if __name__=="__main__":
     s = socket()
-    s.bind(('', 8882))
+    s.bind(('', 8888))
     s.listen(5)
 
     while True:

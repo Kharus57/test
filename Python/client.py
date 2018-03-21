@@ -24,10 +24,12 @@ def create_request_presence(timestamp=None):
 
 
 if __name__=="__main__":
-    s = socket()
-    s.connect(('localhost', 8882))
-    request_presence = create_request_presence()
-    s.send(request_presence.encode("utf-8"))
-    server_response = s.recv(1024)
-    print(server_response.decode("utf-8"))
-    s.close()
+	s = socket()
+	s.connect(('localhost', 8888))
+	request_presence = create_request_presence()
+	s.send(request_presence.encode("utf-8"))
+	server_response = s.recv(1024)
+	print(server_response.decode("utf-8"))
+	s.close()
+	import doctest
+	doctest.testmod()
